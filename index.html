@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase — Modern E-Commerce</title>
+  <meta name="description" content="ShopEase modern e-commerce storefront">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="topbar">Free shipping on orders over ₹1,999 • Easy 7-day returns</div>
+    <nav class="nav container">
+      <a class="logo" href="#"><span>Shop</span>Ease</a>
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products">
+        <button id="searchBtn" aria-label="Search">⌕</button>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" id="wishlistBtn" title="Wishlist">♡ <span id="wishCount">0</span></button>
+        <button class="icon-btn" id="cartBtn" title="Cart">🛒 <span id="cartCount">0</span></button>
+        <button class="menu-btn" id="menuBtn">☰</button>
+      </div>
+    </nav>
+    <div class="navlinks container" id="navLinks">
+      <a href="#products">All Products</a>
+      <a href="#products" data-category-link="Electronics">Electronics</a>
+      <a href="#products" data-category-link="Fashion">Fashion</a>
+      <a href="#products" data-category-link="Home">Home</a>
+      <a href="#products" data-category-link="Beauty">Beauty</a>
+      <a href="#products" data-category-link="Sports">Sports</a>
+      <a href="#deals">Deals</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <span class="eyebrow">SUMMER COLLECTION 2026</span>
+        <h1>Everything you need.<br><span>One easy place.</span></h1>
+        <p>Discover hand-picked products across tech, fashion, home, beauty and more — delivered to your door.</p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#products">Shop now →</a>
+          <a class="btn secondary" href="#deals">View deals</a>
+        </div>
+        <div class="trust-row">
+          <div><b>10K+</b><small>Products</small></div>
+          <div><b>4.8/5</b><small>Customer rating</small></div>
+          <div><b>24/7</b><small>Support</small></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-card card-one">NEW<br><strong>Smart<br>Tech</strong></div>
+        <div class="hero-card card-two">UP TO<br><strong>50% OFF</strong></div>
+        <div class="hero-product">⌚</div>
+      </div>
+    </section>
+
+    <section class="categories container">
+      <div class="section-heading">
+        <div><span class="eyebrow">BROWSE</span><h2>Shop by category</h2></div>
+      </div>
+      <div class="category-grid">
+        <button class="category-card" data-category="Electronics"><span>💻</span><b>Electronics</b><small>124 items</small></button>
+        <button class="category-card" data-category="Fashion"><span>👟</span><b>Fashion</b><small>286 items</small></button>
+        <button class="category-card" data-category="Home"><span>🏠</span><b>Home</b><small>198 items</small></button>
+        <button class="category-card" data-category="Beauty"><span>✨</span><b>Beauty</b><small>156 items</small></button>
+        <button class="category-card" data-category="Sports"><span>⚽</span><b>Sports</b><small>92 items</small></button>
+      </div>
+    </section>
+
+    <section class="products-section container" id="products">
+      <div class="section-heading product-heading">
+        <div><span class="eyebrow">OUR PICKS</span><h2>Featured products</h2></div>
+        <div class="controls">
+          <select id="categoryFilter" aria-label="Filter by category">
+            <option value="All">All categories</option>
+            <option>Electronics</option><option>Fashion</option><option>Home</option><option>Beauty</option><option>Sports</option>
+          </select>
+          <select id="sortSelect" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="low">Price: Low to high</option>
+            <option value="high">Price: High to low</option>
+            <option value="rating">Top rated</option>
+          </select>
+        </div>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+      <p id="emptyState" class="empty hidden">No products found. Try another search or category.</p>
+    </section>
+
+    <section class="deal-banner container" id="deals">
+      <div>
+        <span class="eyebrow">LIMITED TIME</span>
+        <h2>Weekend Mega Sale</h2>
+        <p>Extra 20% off selected products. Use code <strong>SHOP20</strong>.</p>
+      </div>
+      <a class="btn primary" href="#products">Shop deals →</a>
+    </section>
+
+    <section class="features container">
+      <div><span>🚚</span><b>Fast delivery</b><p>Reliable delivery across India.</p></div>
+      <div><span>🔒</span><b>Secure payments</b><p>Your payments are protected.</p></div>
+      <div><span>↩️</span><b>Easy returns</b><p>7-day hassle-free returns.</p></div>
+      <div><span>💬</span><b>24/7 support</b><p>We're here whenever you need us.</p></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="logo footer-logo" href="#"><span>Shop</span>Ease</a><p>Modern shopping made simple.</p></div>
+      <div><h4>Shop</h4><a href="#products">All products</a><a href="#products">Deals</a><a href="#products">New arrivals</a></div>
+      <div><h4>Help</h4><a href="#">Contact us</a><a href="#">Shipping</a><a href="#">Returns</a></div>
+      <div><h4>Newsletter</h4><p>Get offers and new arrivals.</p><div class="newsletter"><input placeholder="Your email"><button>→</button></div></div>
+    </div>
+    <div class="copyright">© 2026 ShopEase. Demo e-commerce website.</div>
+  </footer>
+
+  <aside class="drawer" id="cartDrawer">
+    <div class="drawer-head"><h2>Your cart</h2><button class="close" data-close="cartDrawer">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="subtotal"><span>Subtotal</span><strong id="subtotal">₹0</strong></div>
+      <p>Taxes and shipping calculated at checkout.</p>
+      <button class="btn primary full" id="checkoutBtn">Proceed to checkout</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="modal hidden" id="checkoutModal">
+    <div class="modal-box">
+      <button class="close modal-close" data-close="checkoutModal">×</button>
+      <h2>Checkout</h2>
+      <p class="muted">Demo checkout — no real payment is processed.</p>
+      <form id="checkoutForm">
+        <label>Full name<input required placeholder="Your name"></label>
+        <label>Email<input required type="email" placeholder="you@example.com"></label>
+        <label>Address<textarea required placeholder="Delivery address"></textarea></label>
+        <label>Payment method<select><option>UPI</option><option>Credit / Debit Card</option><option>Cash on Delivery</option></select></label>
+        <button class="btn primary full" type="submit">Place order</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
